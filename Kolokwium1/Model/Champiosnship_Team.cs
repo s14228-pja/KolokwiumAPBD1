@@ -9,14 +9,16 @@ namespace Kolokwium1.Model
 {
     public class Champiosnship_Team
     {
-        [Key]
+
         [ForeignKey("Team")]
-        public int? IdTeam { get; set; }
+        public int IdTeam { get; set; }
+        public Team Team { get; set; }
 
-        [Key]
-        [ForeignKey("Champiosnship")]
-        public int? IdChampiosnship { get; set; }
+        [ForeignKey("Champoionship")]
+        public int IdChampiosnship { get; set; }
+        public Champoionship Champoionship { get; set; }
+        
 
-        public float Score { get; set; }
+        public float? Score { get; set; }
     }
 }

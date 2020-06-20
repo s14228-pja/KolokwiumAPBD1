@@ -16,6 +16,9 @@ namespace Kolokwium1.Model
         [MaxLength(30)]
         public string TeamName { get; set; }
 
-        public int MaxAge { get; set; }
+        public int? MaxAge { get; set; }
+
+        public ICollection<Champiosnship_Team> Champiosnship_Team { get; set; }
+        public ICollection<Player_Team> Player_Team { get; set; }
     }
 }

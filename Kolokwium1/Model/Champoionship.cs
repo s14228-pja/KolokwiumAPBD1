@@ -16,6 +16,8 @@ namespace Kolokwium1.Model
         [MaxLength(100)]
         public string OfficialName { get; set; }
 
-        public int Year { get; set; }
+        public int? Year { get; set; }
+
+        public ICollection<Champiosnship_Team> Champiosnship_Team { get; set; }
     }
 }

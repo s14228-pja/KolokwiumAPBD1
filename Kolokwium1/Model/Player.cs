@@ -20,5 +20,7 @@ namespace Kolokwium1.Model
         public string LastName { get; set; }
 
         public DateTime DateOfBirth { get; set; }
+
+        public ICollection<Player_Team> Player_Team { get; set; }
     }
 }

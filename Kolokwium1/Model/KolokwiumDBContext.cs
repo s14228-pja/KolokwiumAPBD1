@@ -17,8 +17,18 @@ namespace Kolokwium1.Model
         public KolokwiumDBContext() { }
 
         public KolokwiumDBContext(DbContextOptions options)
-        : base(options){ 
-        
+        : base(options)
+        {
+
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Champiosnship_Team>()
+                         .HasKey(e => new { e.IdChampiosnship, e.IdTeam });
+            modelBuilder.Entity<Player_Team>()
+             .HasKey(e => new { e.IdPlayer, e.IdTeam });
         }
     }
 }

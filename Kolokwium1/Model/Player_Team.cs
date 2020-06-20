@@ -9,13 +9,14 @@ namespace Kolokwium1.Model
 {
     public class Player_Team
     {
-        [Key]
         [ForeignKey("Team")]
-        public int? IdTeam { get; set; }
-        
-        [Key]
+        public int IdTeam { get; set; }
+        public Team Team { get; set; }
+
+
         [ForeignKey("Player")]
-        public int? IdPlayer { get; set; }
+        public int IdPlayer { get; set; }
+        public Player Player { get; set; }
 
         [MaxLength(300)]
         [Required]
